@@ -22,8 +22,8 @@ public class Proveedor {
 	public String getDireccion() {
 		return direccion;
 	}
-	public void setDireccion(String dirección) {
-		this.direccion = dirección;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 	public String getTelefono() {
 		return telefono;

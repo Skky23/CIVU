@@ -12,6 +12,7 @@ import ventanas.VentanaGestionProveedores;
 import ventanas.VentanaGestionUsuarios;
 import ventanas.VentanaPerfil;
 import ventanas.VentanaPrincipal;
+import ventanas.VentanaReporte;
 
 public class ControladorMenuPrincipal implements ActionListener{
 	
@@ -21,10 +22,12 @@ public class ControladorMenuPrincipal implements ActionListener{
 	VentanaGestionClientes ventanaGestionClientes;
 	VentanaGestionProveedores ventanaGestionProveedores;
 	VentanaGestionInventario ventanaGestionInventario;
+	VentanaReporte ventanaReporte;
 	ControladorPerfil controladorPerfil;
 	ControladorGestionUsuarios controladorGestionUsuarios;
 	ControladorGestionClientes controladorGestionClientes;
 	ControladorGestionProveedores controladorGestionProveedores;
+	ControladorReporte controladorReporte;
 	Usuario empleado;
 	
 	
@@ -84,7 +87,10 @@ public ControladorMenuPrincipal(VentanaPrincipal ventanaPrincipal, Usuario emple
 		}
 	
 		if(e.getSource() == ventanaPrincipal.btnReportes) {
-			
+			ventanaReporte = new VentanaReporte();
+			controladorReporte = new ControladorReporte(ventanaReporte);
+			//controlador gestion inventario
+			mostrarPanel(ventanaReporte);
 		}
 	
 		if(e.getSource() == ventanaPrincipal.btnSalir) {
